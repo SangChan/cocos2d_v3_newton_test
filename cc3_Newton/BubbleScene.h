@@ -10,6 +10,7 @@
 #import "cocos2d-ui.h"
 #import "NewtonConstants.h"
 #import "BubbleSphere.h"
+#import "Magnet.h"
 
 @interface BubbleScene : CCScene
 

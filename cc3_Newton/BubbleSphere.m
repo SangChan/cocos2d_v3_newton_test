@@ -120,7 +120,7 @@
     _previousTime = event.timestamp;
     _previousPos = parentPos;
     
-    CCLOG(@"A Newton Sphere was moved : (%f,%f)",_previousPos.x,_previousPos.y);
+    //CCLOG(@"A Newton Sphere was moved : (%f,%f)",_previousPos.x,_previousPos.y);
 }
 
 - (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event

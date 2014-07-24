@@ -13,7 +13,6 @@
 		630165D41957D45700A1F8AB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165D31957D45700A1F8AB /* AudioToolbox.framework */; };
 		630165D61957D45700A1F8AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165D51957D45700A1F8AB /* AVFoundation.framework */; };
 		630165D81957D45700A1F8AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165D71957D45700A1F8AB /* UIKit.framework */; };
-		630165DA1957D45700A1F8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165D91957D45700A1F8AB /* Foundation.framework */; };
 		630165DC1957D45700A1F8AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165DB1957D45700A1F8AB /* CoreGraphics.framework */; };
 		630165DE1957D45700A1F8AB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165DD1957D45700A1F8AB /* CoreText.framework */; };
 		630165E41957D45700A1F8AB /* libObjectiveChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165E11957D45700A1F8AB /* libObjectiveChipmunk.a */; };
@@ -224,6 +223,8 @@
 		630168961957D45900A1F8AB /* newton-ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 630168951957D45900A1F8AB /* newton-ipad.png */; };
 		630168981957D45900A1F8AB /* newton.plist in Resources */ = {isa = PBXBuildFile; fileRef = 630168971957D45900A1F8AB /* newton.plist */; };
 		6301689A1957D45900A1F8AB /* newton.png in Resources */ = {isa = PBXBuildFile; fileRef = 630168991957D45900A1F8AB /* newton.png */; };
+		631C35C21980EDB1009A20D7 /* Magnet.m in Sources */ = {isa = PBXBuildFile; fileRef = 631C35C11980EDB1009A20D7 /* Magnet.m */; };
+		631C36041980F33A009A20D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630165D91957D45700A1F8AB /* Foundation.framework */; };
 		63C1A5DF197D0B4700ABB6B0 /* BubbleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C1A5DE197D0B4700ABB6B0 /* BubbleScene.m */; };
 		63C1A5E2197E567900ABB6B0 /* BubbleSphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C1A5E1197E567900ABB6B0 /* BubbleSphere.m */; };
 		63C1A5E5197E575100ABB6B0 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C1A5E3197E575100ABB6B0 /* bubble.png */; };
@@ -686,6 +687,8 @@
 		630168951957D45900A1F8AB /* newton-ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "newton-ipad.png"; path = "Resources/newton-ipad.png"; sourceTree = "<group>"; };
 		630168971957D45900A1F8AB /* newton.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = newton.plist; path = Resources/newton.plist; sourceTree = "<group>"; };
 		630168991957D45900A1F8AB /* newton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = newton.png; path = Resources/newton.png; sourceTree = "<group>"; };
+		631C35C01980EDB1009A20D7 /* Magnet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Magnet.h; sourceTree = "<group>"; };
+		631C35C11980EDB1009A20D7 /* Magnet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Magnet.m; sourceTree = "<group>"; };
 		63C1A5DD197D0B4700ABB6B0 /* BubbleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleScene.h; sourceTree = "<group>"; };
 		63C1A5DE197D0B4700ABB6B0 /* BubbleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleScene.m; sourceTree = "<group>"; };
 		63C1A5E0197E567900ABB6B0 /* BubbleSphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSphere.h; sourceTree = "<group>"; };
@@ -699,6 +702,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631C36041980F33A009A20D7 /* Foundation.framework in Frameworks */,
 				630165E41957D45700A1F8AB /* libObjectiveChipmunk.a in Frameworks */,
 				630165D21957D45700A1F8AB /* OpenAL.framework in Frameworks */,
 				630165D81957D45700A1F8AB /* UIKit.framework in Frameworks */,
@@ -707,7 +711,6 @@
 				630165DC1957D45700A1F8AB /* CoreGraphics.framework in Frameworks */,
 				630165DE1957D45700A1F8AB /* CoreText.framework in Frameworks */,
 				630165D01957D45700A1F8AB /* OpenGLES.framework in Frameworks */,
-				630165DA1957D45700A1F8AB /* Foundation.framework in Frameworks */,
 				630165D41957D45700A1F8AB /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1608,6 +1611,8 @@
 				63C1A5DE197D0B4700ABB6B0 /* BubbleScene.m */,
 				63C1A5E0197E567900ABB6B0 /* BubbleSphere.h */,
 				63C1A5E1197E567900ABB6B0 /* BubbleSphere.m */,
+				631C35C01980EDB1009A20D7 /* Magnet.h */,
+				631C35C11980EDB1009A20D7 /* Magnet.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1844,6 +1849,7 @@
 				630167DE1957D45800A1F8AB /* quaternion.c in Sources */,
 				630166921957D45700A1F8AB /* CCPhysicsNode.m in Sources */,
 				630167781957D45800A1F8AB /* ALSoundSourcePool.m in Sources */,
+				631C35C21980EDB1009A20D7 /* Magnet.m in Sources */,
 				630166871957D45700A1F8AB /* CCParticleSystemBase.m in Sources */,
 				6301671E1957D45800A1F8AB /* CCColor.m in Sources */,
 				6301676B1957D45800A1F8AB /* ALChannelSource.m in Sources */,
