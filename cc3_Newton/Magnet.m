@@ -54,9 +54,13 @@
             CGFloat r = ccpDistance(self.position, magnetBody.position);
             //NSLog(@"name : %@ , distance : %f",_letter, r);
             if (r <= _radius) {
-                if (r < 15) {
+                if (r < 20) {
                     magnetBody.position = self.position;
                     magnetBody.physicsBody.velocity = CGPointZero;
+                    magnetBody.physicsBody.angularVelocity = 0.0;
+                    [magnetBody.physicsBody setSleeping:YES];
+                    //CCActionRotateTo *rotateTo = [CCActionRotateTo actionWithDuration:1.0f angle:0.0];
+                    //[magnetBody runAction:[CCActionRepeatForever actionWithAction:rotateTo]];
                 }
                 else {
                     CGPoint force = ccpMult([self normalize:distance], _force/(r*r));

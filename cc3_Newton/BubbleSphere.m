@@ -35,11 +35,9 @@
     // Use the content size from the sphere, and subtract NewtonSphereMargin (a constant), as the image we are using, has a transparent edge
     CCPhysicsBody *body = [CCPhysicsBody bodyWithCircleOfRadius:_sphere.contentSize.width * 0.5 andCenter:CGPointZero];
     
-    // Assign the physics to our base node
-    self.physicsBody = body;
-    
     body.type = CCPhysicsBodyTypeDynamic;
     // Set the physics properties, trying to simulate a newtons cradle
+    //body.mass = 1.0f;
     body.density = 1.0f;
     body.friction = 0.5f;
     body.elasticity = 1.0f;
@@ -52,7 +50,8 @@
     // Spheres should collide with both other spheres, and the outline
     body.collisionMask = @[@"sphere", @"outline"];
     
-    
+    // Assign the physics to our base node
+    self.physicsBody = body;
     // enable touch for the sphere
     self.userInteractionEnabled = YES;
     return self;
@@ -96,6 +95,10 @@
     // convert the touch into parents coordinate system
     // This is often the same as the world location, but if the scene is ex, scaled or offset, it might not be
     CGPoint parentPos = [_parent convertToNodeSpace:touch.locationInWorld];
+    CCLOG(@"A Newton Sphere Began : (%f,%f)",parentPos.x,parentPos.y);
+    if (parentPos.x < 32 || parentPos.x > [CCDirector sharedDirector].viewSize.width-32 || parentPos.y < 32+20 || parentPos.y > [CCDirector sharedDirector].viewSize.height-32-20) {
+        [self touchEnded:touch withEvent:event];
+    }
     
     // The spehre was grabbed.
     // To move the sphere around in a "believeable" manner, two things has to be done
@@ -116,6 +119,9 @@
     // This is often the same as the world location, but if the scene is ex, scaled or offset, it might not be
     
     CGPoint parentPos = [_parent convertToNodeSpace:touch.locationInWorld];
+    if (parentPos.x < 32 || parentPos.x > [CCDirector sharedDirector].viewSize.width-32 || parentPos.y < 32+20 || parentPos.y > [CCDirector sharedDirector].viewSize.height-32-20) {
+        [self touchEnded:touch withEvent:event];
+    }
     _previousVelocity = ccpMult(ccpSub(parentPos, _previousPos),10);
     _previousTime = event.timestamp;
     _previousPos = parentPos;
